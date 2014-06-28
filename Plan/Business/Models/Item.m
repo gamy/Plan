@@ -26,11 +26,6 @@
 }
 
 
-- (NSString *)savedKey
-{
-    return self.cid;
-}
-
 + (NSComparator)comparator
 {
     return  ^(id obj1, id obj2){
@@ -44,6 +39,24 @@
     };
 }
 
+- (NSString *)priceDescription
+{
+    NSString *priceString = 0;
+    if (self.price == 0) {
+        priceString = @"";
+    }else if(self.price - (int)(self.price) < 0.01){
+        priceString = [NSString stringWithFormat:@"%d", (int)self.price];
+    }else{
+        priceString = [NSString stringWithFormat:@"%.1f",self.price];
+    }
+    return priceString;
+}
+
+- (NSString *)savedKey
+{
+    return self.cid;
+}
+
 @end
 
 
@@ -53,6 +66,18 @@
 - (Class)modeClass
 {
     return [Item class];
+}
+
+- (NSMutableArray *)itemsForPlanId:(NSString *)planId
+{
+    
+    NSMutableArray *list = [NSMutableArray array];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.planId = %@",planId];
+    [self.db enumerateKeysAndObjectsBackward:YES lazily:NO startingAtKey:nil filteredByPredicate:predicate andPrefix:nil usingBlock:^(LevelDBKey * key, id value, BOOL *stop)
+    {
+        [list addObject:value];
+    }];
+    return list;
 }
 
 @end

@@ -6,21 +6,19 @@
 //  Copyright (c) 2014年 gamy. All rights reserved.
 //
 
-#import "MasterViewController.h"
-#import "DetailViewController.h"
+#import "PlanViewController.h"
+#import "ItemsViewController.h"
 #import "Plan.h"
 
-@interface MasterViewController () {
+@interface PlanViewController () {
 
 }
 @property(nonatomic, weak) NSArray *plans;
 
-- (IBAction)addPlan:(id)sender;
-
 @end
 
 
-@implementation MasterViewController
+@implementation PlanViewController
 
 - (void)awakeFromNib
 {
@@ -71,7 +69,7 @@
 
     Plan *object = _plans[indexPath.row];
     cell.textLabel.text = object.title;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",object.modifyDate];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",[object.modifyDate formattedAsTimeAgo]];
     return cell;
 }
 
@@ -94,16 +92,18 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    Plan *plan = nil;
+    if ([[segue identifier] isEqualToString:@"showPlan"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _plans[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+        plan = _plans[indexPath.row];
+    }else if ([[segue identifier] isEqualToString:@"addPlan"]) {
+        plan = [[PlanManager sharedManager] createModel];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
+    [[segue destinationViewController] setPlan:plan];
 }
 
-- (IBAction)addPlan:(id)sender {
-    [[PlanManager sharedManager] createModel];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
+
+
 @end

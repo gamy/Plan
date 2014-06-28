@@ -10,3 +10,4 @@
 
 #import "UIImage+Sugar.h"
 #import "NSString+Sugar.h"
+#import "UIView+Sugar.h"

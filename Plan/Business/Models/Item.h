@@ -26,12 +26,19 @@ typedef enum
 
 @property (nonatomic, assign) CGFloat price;
 @property (nonatomic, copy) NSString *planId;
+@property (nonatomic, copy) NSString *detail;
 @property (nonatomic, strong)NSMutableArray *images;
+
+- (NSString *)priceDescription;
 
 @end
 
 
 @interface ItemManager : ModelManager
+{
 
+}
+
+- (NSMutableArray *)itemsForPlanId:(NSString *)planId;
 
 @end

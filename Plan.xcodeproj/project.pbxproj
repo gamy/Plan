@@ -10,6 +10,14 @@
 		3AC176C7195E99F600D38E8B /* UIImage+Sugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176C6195E99F600D38E8B /* UIImage+Sugar.m */; };
 		3AC176CA195EA03700D38E8B /* NSString+Sugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176C9195EA03700D38E8B /* NSString+Sugar.m */; };
 		3AC176CE195EB9B600D38E8B /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176CD195EB9B600D38E8B /* Model.m */; };
+		3AC176D4195EFAE600D38E8B /* GMTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176D3195EFAE600D38E8B /* GMTextView.m */; };
+		3AC176D9195EFB4C00D38E8B /* GMDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176D8195EFB4C00D38E8B /* GMDevice.m */; };
+		3AC176DC195F006300D38E8B /* GMTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176DB195F006300D38E8B /* GMTextField.m */; };
+		3AC176E5195F0AF700D38E8B /* EditItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176E4195F0AF700D38E8B /* EditItemViewController.m */; };
+		3AC176E8195F0C5600D38E8B /* GMTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176E7195F0C5600D38E8B /* GMTextFieldCell.m */; };
+		3AC176EB195F0D8600D38E8B /* GMTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176EA195F0D8600D38E8B /* GMTextViewCell.m */; };
+		3AC176EE195F148D00D38E8B /* GMGridImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176ED195F148D00D38E8B /* GMGridImageCell.m */; };
+		3AC176F1195F271700D38E8B /* UIView+Sugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176F0195F271700D38E8B /* UIView+Sugar.m */; };
 		3AFE57E4195ABC42001E8E67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFE57E3195ABC42001E8E67 /* Foundation.framework */; };
 		3AFE57E6195ABC42001E8E67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFE57E5195ABC42001E8E67 /* CoreGraphics.framework */; };
 		3AFE57E8195ABC42001E8E67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFE57E7195ABC42001E8E67 /* UIKit.framework */; };
@@ -23,8 +31,8 @@
 		3AFE5808195ABC42001E8E67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFE57E7195ABC42001E8E67 /* UIKit.framework */; };
 		3AFE5810195ABC42001E8E67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AFE580E195ABC42001E8E67 /* InfoPlist.strings */; };
 		3AFE5812195ABC42001E8E67 /* PlanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE5811195ABC42001E8E67 /* PlanTests.m */; };
-		3AFE583B195AC476001E8E67 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE5838195AC476001E8E67 /* DetailViewController.m */; };
-		3AFE583C195AC476001E8E67 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE583A195AC476001E8E67 /* MasterViewController.m */; };
+		3AFE583B195AC476001E8E67 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE5838195AC476001E8E67 /* ItemsViewController.m */; };
+		3AFE583C195AC476001E8E67 /* PlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE583A195AC476001E8E67 /* PlanViewController.m */; };
 		3AFE5844195AD076001E8E67 /* Plan.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE5843195AD076001E8E67 /* Plan.m */; };
 		3AFE5847195AD076001E8E67 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFE5846195AD076001E8E67 /* Item.m */; };
 		4329E04CB531478CAEC0F8C9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A47CB8190D49D599B1232A /* libPods.a */; };
@@ -49,6 +57,22 @@
 		3AC176CB195EB94D00D38E8B /* SugarHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SugarHeader.h; sourceTree = "<group>"; };
 		3AC176CC195EB9B600D38E8B /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		3AC176CD195EB9B600D38E8B /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		3AC176D2195EFAE600D38E8B /* GMTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTextView.h; sourceTree = "<group>"; };
+		3AC176D3195EFAE600D38E8B /* GMTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTextView.m; sourceTree = "<group>"; };
+		3AC176D7195EFB4C00D38E8B /* GMDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDevice.h; sourceTree = "<group>"; };
+		3AC176D8195EFB4C00D38E8B /* GMDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDevice.m; sourceTree = "<group>"; };
+		3AC176DA195F006300D38E8B /* GMTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTextField.h; sourceTree = "<group>"; };
+		3AC176DB195F006300D38E8B /* GMTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTextField.m; sourceTree = "<group>"; };
+		3AC176E3195F0AF700D38E8B /* EditItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditItemViewController.h; sourceTree = "<group>"; };
+		3AC176E4195F0AF700D38E8B /* EditItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditItemViewController.m; sourceTree = "<group>"; };
+		3AC176E6195F0C5600D38E8B /* GMTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTextFieldCell.h; sourceTree = "<group>"; };
+		3AC176E7195F0C5600D38E8B /* GMTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTextFieldCell.m; sourceTree = "<group>"; };
+		3AC176E9195F0D8600D38E8B /* GMTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTextViewCell.h; sourceTree = "<group>"; };
+		3AC176EA195F0D8600D38E8B /* GMTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTextViewCell.m; sourceTree = "<group>"; };
+		3AC176EC195F148D00D38E8B /* GMGridImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMGridImageCell.h; sourceTree = "<group>"; };
+		3AC176ED195F148D00D38E8B /* GMGridImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGridImageCell.m; sourceTree = "<group>"; };
+		3AC176EF195F271700D38E8B /* UIView+Sugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Sugar.h"; sourceTree = "<group>"; };
+		3AC176F0195F271700D38E8B /* UIView+Sugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Sugar.m"; sourceTree = "<group>"; };
 		3AFE57E0195ABC42001E8E67 /* Plan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFE57E3195ABC42001E8E67 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3AFE57E5195ABC42001E8E67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,10 +90,10 @@
 		3AFE580D195ABC42001E8E67 /* PlanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlanTests-Info.plist"; sourceTree = "<group>"; };
 		3AFE580F195ABC42001E8E67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3AFE5811195ABC42001E8E67 /* PlanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanTests.m; sourceTree = "<group>"; };
-		3AFE5837195AC476001E8E67 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		3AFE5838195AC476001E8E67 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		3AFE5839195AC476001E8E67 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		3AFE583A195AC476001E8E67 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		3AFE5837195AC476001E8E67 /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewController.h; sourceTree = "<group>"; };
+		3AFE5838195AC476001E8E67 /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
+		3AFE5839195AC476001E8E67 /* PlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanViewController.h; sourceTree = "<group>"; };
+		3AFE583A195AC476001E8E67 /* PlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanViewController.m; sourceTree = "<group>"; };
 		3AFE5842195AD076001E8E67 /* Plan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plan.h; sourceTree = "<group>"; };
 		3AFE5843195AD076001E8E67 /* Plan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plan.m; sourceTree = "<group>"; };
 		3AFE5845195AD076001E8E67 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
@@ -112,6 +136,8 @@
 				3AC176C8195EA03700D38E8B /* NSString+Sugar.h */,
 				3AC176C9195EA03700D38E8B /* NSString+Sugar.m */,
 				3AC176CB195EB94D00D38E8B /* SugarHeader.h */,
+				3AC176EF195F271700D38E8B /* UIView+Sugar.h */,
+				3AC176F0195F271700D38E8B /* UIView+Sugar.m */,
 			);
 			path = Sugars;
 			sourceTree = "<group>";
@@ -234,10 +260,12 @@
 		3AFE582D195AC43A001E8E67 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3AFE5837195AC476001E8E67 /* DetailViewController.h */,
-				3AFE5838195AC476001E8E67 /* DetailViewController.m */,
-				3AFE5839195AC476001E8E67 /* MasterViewController.h */,
-				3AFE583A195AC476001E8E67 /* MasterViewController.m */,
+				3AFE5839195AC476001E8E67 /* PlanViewController.h */,
+				3AFE583A195AC476001E8E67 /* PlanViewController.m */,
+				3AFE5837195AC476001E8E67 /* ItemsViewController.h */,
+				3AFE5838195AC476001E8E67 /* ItemsViewController.m */,
+				3AC176E3195F0AF700D38E8B /* EditItemViewController.h */,
+				3AC176E4195F0AF700D38E8B /* EditItemViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -287,6 +315,8 @@
 		3AFE5833195AC43A001E8E67 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3AC176D7195EFB4C00D38E8B /* GMDevice.h */,
+				3AC176D8195EFB4C00D38E8B /* GMDevice.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -301,6 +331,16 @@
 		3AFE5835195AC43A001E8E67 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3AC176D2195EFAE600D38E8B /* GMTextView.h */,
+				3AC176D3195EFAE600D38E8B /* GMTextView.m */,
+				3AC176DA195F006300D38E8B /* GMTextField.h */,
+				3AC176DB195F006300D38E8B /* GMTextField.m */,
+				3AC176E6195F0C5600D38E8B /* GMTextFieldCell.h */,
+				3AC176E7195F0C5600D38E8B /* GMTextFieldCell.m */,
+				3AC176E9195F0D8600D38E8B /* GMTextViewCell.h */,
+				3AC176EA195F0D8600D38E8B /* GMTextViewCell.m */,
+				3AC176EC195F148D00D38E8B /* GMGridImageCell.h */,
+				3AC176ED195F148D00D38E8B /* GMGridImageCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -476,15 +516,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AFE583C195AC476001E8E67 /* MasterViewController.m in Sources */,
+				3AFE583C195AC476001E8E67 /* PlanViewController.m in Sources */,
+				3AC176F1195F271700D38E8B /* UIView+Sugar.m in Sources */,
 				3AFE57F4195ABC42001E8E67 /* AppDelegate.m in Sources */,
+				3AC176D4195EFAE600D38E8B /* GMTextView.m in Sources */,
+				3AC176E8195F0C5600D38E8B /* GMTextFieldCell.m in Sources */,
 				3AC176C7195E99F600D38E8B /* UIImage+Sugar.m in Sources */,
 				3AC176CE195EB9B600D38E8B /* Model.m in Sources */,
+				3AC176E5195F0AF700D38E8B /* EditItemViewController.m in Sources */,
+				3AC176EB195F0D8600D38E8B /* GMTextViewCell.m in Sources */,
+				3AC176DC195F006300D38E8B /* GMTextField.m in Sources */,
+				3AC176EE195F148D00D38E8B /* GMGridImageCell.m in Sources */,
 				3AFE57F0195ABC42001E8E67 /* main.m in Sources */,
 				3AFE5844195AD076001E8E67 /* Plan.m in Sources */,
 				3AFE5847195AD076001E8E67 /* Item.m in Sources */,
 				3AC176CA195EA03700D38E8B /* NSString+Sugar.m in Sources */,
-				3AFE583B195AC476001E8E67 /* DetailViewController.m in Sources */,
+				3AC176D9195EFB4C00D38E8B /* GMDevice.m in Sources */,
+				3AFE583B195AC476001E8E67 /* ItemsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

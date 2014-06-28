@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Plan.h"
 
-@interface DetailViewController : UIViewController
+@interface ItemsViewController : UITableViewController
 
-@property (weak, nonatomic) Plan *detailItem;
+@property (weak, nonatomic) Plan *plan;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
 @end
