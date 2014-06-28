@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F2DCC6E4-029A-4240-AB4F-A906F2B73515</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Plan</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>27B211B2-D753-481C-BA4F-E14C1E083BF3</key>
+		<string>ssh://gamy.github.com/gamy/Plan.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Plan.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>27B211B2-D753-481C-BA4F-E14C1E083BF3</key>
+		<string>..</string>
+		<key>D68A2752-E1F0-41FC-B586-56267843E948</key>
+		<string>../Pods/Objective-LevelDB/leveldb-library</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://gamy.github.com/gamy/Plan.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>27B211B2-D753-481C-BA4F-E14C1E083BF3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D68A2752-E1F0-41FC-B586-56267843E948</string>
+			<key>IDESourceControlWCCName</key>
+			<string>leveldb-library</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>27B211B2-D753-481C-BA4F-E14C1E083BF3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Plan</string>
+		</dict>
+	</array>
+</dict>
+</plist>
