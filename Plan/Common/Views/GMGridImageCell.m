@@ -11,9 +11,9 @@
 
 #define MAX_IMAGE_NUMBER 3
 
-@interface GMGridImageCell()
+@interface GMGridImageCell()<UIGestureRecognizerDelegate>
 
-@property(nonatomic, weak)NSArray *images;
+@property(nonatomic, strong)NSArray *images;
 
 @end
 
@@ -23,28 +23,26 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }
 
+
+#define ADD_IMAGE_VIEW_TAG (20140701)
+
+
 - (BOOL)isImageViewAddView:(UIImageView *)imageView
 {
-    NSInteger count = self.images.count;
-    if (count < MAX_IMAGE_NUMBER) {
-        NSInteger i = 0;
-        for (UIImageView *iv in self.imageViews) {
-            if (i++ == count) {
-                return imageView == iv;
-            }
-        }
-    }
-    return NO;
+    return imageView.tag == ADD_IMAGE_VIEW_TAG;
 }
 
 - (void)awakeFromNib
 {
-    __weak typeof (self) wself = self;
+    
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    WEAK_SELF(wself);
     NSInteger i = 0;
     for (UIImageView *iv in self.imageViews) {
         iv.userInteractionEnabled = YES;
@@ -66,13 +64,21 @@
                     wself.longPressImageBlock(i, wself.indexPath);
                 }
             }
-        } delay:1];
-        
+
+        }];
+        lg.delegate = self;
+        lg.minimumPressDuration = 0.3;
         [iv addGestureRecognizer:lg];
         
         ++ i;
     }
 }
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    return YES;
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
@@ -97,7 +103,7 @@
         UIImageView *iv = self.imageViews[i];
         iv.hidden = NO;
         iv.image = image;
-        iv.backgroundColor = [UIColor clearColor];
+        iv.tag = 0;
         i ++;
         if (i > MAX_IMAGE_NUMBER) {
             break;
@@ -108,14 +114,13 @@
         UIImageView *iv = self.imageViews[temp];
         if (temp == i ) {
             iv.hidden = NO;
-            //TODO set add image
-            iv.backgroundColor = [UIColor redColor];
+            iv.tag = ADD_IMAGE_VIEW_TAG;
+            iv.image = [UIImage imageNamed:@"add_photo"];
         }else{
+            iv.tag = 0;
             iv.hidden = YES;
-            iv.backgroundColor = [UIColor clearColor];
         }
         temp ++;
     }
 }
-
 @end

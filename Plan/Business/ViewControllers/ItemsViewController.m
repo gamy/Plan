@@ -40,7 +40,9 @@
             [[PlanManager sharedManager] saveModel:plan];
         }
     };
-    
+    if ([self.plan.title isEqualToString:@"未命名"]) {
+        [textField performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0.2];
+    }
 }
 
 - (void)viewDidLoad

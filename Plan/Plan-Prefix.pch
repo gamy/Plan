@@ -22,4 +22,6 @@
     #import "GMDevice.h"
     #import "UIColor+Hex.h"
     #import "NSDate+NVTimeAgo.h"
+
+    #define WEAK_SELF(var)  __weak typeof(self) var = self;
 #endif

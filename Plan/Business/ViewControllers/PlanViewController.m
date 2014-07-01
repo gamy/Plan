@@ -10,7 +10,7 @@
 #import "ItemsViewController.h"
 #import "Plan.h"
 
-@interface PlanViewController () {
+@interface PlanViewController ()<UIImagePickerControllerDelegate> {
 
 }
 @property(nonatomic, weak) NSArray *plans;
@@ -29,7 +29,6 @@
 {
     [super viewDidLoad];
     self.plans = [[PlanManager sharedManager] allModels];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated

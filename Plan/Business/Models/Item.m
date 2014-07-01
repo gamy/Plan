@@ -8,21 +8,30 @@
 
 #import "Item.h"
 #import "Plan.h"
-
+#import "ImageManager.h"
 
 @implementation Item
-
+{
+    NSMutableDictionary *imageDict;
+}
 - (instancetype)init
 {    
     self = [super init];
     if (self) {
-        self.title = @"未命名";
         self.createDate = [NSDate date];
         self.modifyDate = self.createDate;
         self.status = PlanStatusNormal;
         self.price = 0;
     }
     return self;
+}
+
+- (NSString *)title
+{
+    if ([_title length] == 0) {
+        _title = @"未命名";
+    }
+    return _title;
 }
 
 
@@ -57,6 +66,69 @@
     return self.cid;
 }
 
+- (UIImage *)imageForKey:(NSString *)key
+{
+    if (!key) {
+        return nil;
+    }
+    if (!imageDict) {
+        imageDict = [NSMutableDictionary dictionary];
+    }
+    UIImage *image = imageDict[key];
+    if (image == nil) {
+        image = [[ImageManager sharedManager] ImageForKey:key];
+        if (image) {
+            imageDict[key] = image;
+        }
+    }
+    return image;
+}
+
+- (void)clearImageCache
+{
+    [imageDict removeAllObjects];
+}
+
+- (void)setImage:(UIImage *)image ForKey:(NSString *)key
+{
+    if (key) {
+        imageDict[key] = image;
+        [[ImageManager sharedManager] setImage:image forKey:key];
+    }
+}
+- (void)addImage:(UIImage *)image
+{
+    if (image) {
+        NSString *key = [[ImageManager sharedManager] saveImage:image];
+        [self.imageKeys addObject:key];
+        [imageDict setObject:image forKey:key];
+    }
+}
+- (void)removeImageWithKey:(NSString *)key
+{
+    if (key) {
+        [[ImageManager sharedManager] removeImageForKey:key];
+        [self.imageKeys removeObject:key];
+        [imageDict removeObjectForKey:key];
+    }
+}
+
+- (void)removeAllImages
+{
+    NSArray *temp = [self.imageKeys copy];
+    for (NSString *key in temp) {
+        [self removeImageWithKey:key];
+    }
+}
+
+- (NSMutableArray *)imageKeys
+{
+    if (_imageKeys == nil) {
+        _imageKeys = [NSMutableArray array];
+    }
+    return _imageKeys;
+}
+
 @end
 
 
@@ -79,5 +151,12 @@
     }];
     return list;
 }
+
+- (void)deleteModel:(Model *)model
+{
+    [(Item *)model removeAllImages];
+    [super deleteModel:model];
+}
+
 
 @end

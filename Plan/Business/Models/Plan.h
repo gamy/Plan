@@ -22,7 +22,7 @@ typedef enum
 @property (nonatomic, strong) NSDate *createDate;
 @property (nonatomic, strong) NSDate * modifyDate;
 @property (nonatomic, assign) PlanStatus status;
-//@property (nonatomic, strong) NSMutableArray *items;
+- (NSMutableArray *)items;
 
 @end
 

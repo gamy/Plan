@@ -7,7 +7,7 @@
 //
 
 #import "Plan.h"
-
+#import "item.h"
 
 @implementation Plan
 
@@ -15,12 +15,19 @@
 {    
     self = [super init];
     if (self) {
-        self.title = @"未命名";
         self.createDate = [NSDate date];
         self.modifyDate = self.createDate;
         self.status = PlanStatusNormal;
     }
     return self;
+}
+
+-(NSString *)title
+{
+    if ([_title length] == 0) {
+        _title = @"未命名";
+    }
+    return _title;
 }
 
 + (NSComparator)comparator
@@ -36,6 +43,10 @@
     };
 }
 
+- (NSMutableArray *)items
+{
+    return [[ItemManager sharedManager] itemsForPlanId:self.cid];
+}
 
 @end
 
@@ -47,5 +58,17 @@
 {
     return [Plan class];
 }
+
+- (void)deleteModel:(Model *)model
+{
+    Plan *plan = (Plan *)model;
+    NSArray *temp = [plan.items copy];
+    for (Item *item in temp) {
+        [[ItemManager sharedManager] deleteModel:item];
+    }
+    [super deleteModel:model];
+}
+
+
 
 @end

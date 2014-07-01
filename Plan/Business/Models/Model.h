@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NSObject+NSCoding.h"
 #import "NSObject+AutoDescription.h"
+#import "CommonManager.h"
 
 @interface Model : NSObject<NSCoding>
 
@@ -22,14 +23,8 @@
 @end
 
 
-@interface ModelManager : NSObject
+@interface ModelManager : CommonManager
 
-@property(nonatomic, readonly) LevelDB *db;
-
-
-+ (instancetype)sharedManager;
-- (BOOL)needLevelDB;
-- (Class)modeClass;
 
 @end
 

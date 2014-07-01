@@ -64,43 +64,7 @@
     NSMutableArray *_models;
 }
 
-- (Class)modeClass
-{
-    return [Model class];
-}
 
-- (BOOL)needLevelDB
-{
-    return YES;
-}
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        if ([self needLevelDB]) {
-            NSLog(@"init data base = %@", NSStringFromClass([self class]));
-            _db = [LevelDB databaseInLibraryWithName:NSStringFromClass([self class])];
-        }
-    }
-    return self;
-}
-
-+ (instancetype)sharedManager
-{
-    static dispatch_once_t onceToken;
-    static NSMutableDictionary *managerDict = nil;
-    dispatch_once(&onceToken, ^{
-        managerDict = [NSMutableDictionary dictionary];
-    });
-    NSString *key = NSStringFromClass(self);
-    id manager = managerDict[key];
-    if (manager == nil) {
-        manager = [[self alloc] init];
-        managerDict[key] = manager;
-    }
-    return manager;
-}
 
 @end
 
@@ -119,7 +83,7 @@
     if (model == nil) {
         return;
     }
-    if (![_db objectExistsForKey:model.savedKey]) {
+    if (![self.db objectExistsForKey:model.savedKey]) {
         if (!_models) {
             //load models
             [self allModels];
@@ -131,24 +95,25 @@
 
 - (void)saveModel:(Model *)model
 {
-    [_db setObject:model forKey:model.savedKey];
+    [self.db setObject:model forKey:model.savedKey];
 }
 - (id)modelForKey:(NSString *)key
 {
-    return [_db objectForKey:key];
+    return [self.db objectForKey:key];
 }
 
 - (void)deleteModel:(Model *)model
 {
+    NSLog(@"delete model = %@", model);
     if (model) {
         [_models removeObject:model];
-        [_db removeObjectForKey:model.savedKey];
+        [self.db removeObjectForKey:model.savedKey];
     }
 }
 
 - (void)deleteModelForKey:(NSString *)key
 {
-    [_db removeObjectForKey:key];
+    [self.db removeObjectForKey:key];
 }
 
 - (NSMutableArray *)allModels
@@ -158,7 +123,7 @@
         NSLog(@"models is nil, load from db");
         _models = [NSMutableArray array];
         //Load from db
-        [_db enumerateKeysAndObjectsUsingBlock:^(LevelDBKey *key, id value, BOOL *stop) {
+        [self.db enumerateKeysAndObjectsUsingBlock:^(LevelDBKey *key, id value, BOOL *stop) {
             if (value) {
                 [_models addObject:value];
             }
@@ -171,7 +136,7 @@
 - (void)clearModels
 {
     [_models removeAllObjects];
-    [_db removeAllObjects];
+    [self.db removeAllObjects];
 }
 
 

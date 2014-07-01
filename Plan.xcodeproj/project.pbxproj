@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AB9A0FF1962547900EDB303 /* ImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9A0FE1962547900EDB303 /* ImageManager.m */; };
+		3AB9A1021962551400EDB303 /* CommonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9A1011962551400EDB303 /* CommonManager.m */; };
 		3AC176C7195E99F600D38E8B /* UIImage+Sugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176C6195E99F600D38E8B /* UIImage+Sugar.m */; };
 		3AC176CA195EA03700D38E8B /* NSString+Sugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176C9195EA03700D38E8B /* NSString+Sugar.m */; };
 		3AC176CE195EB9B600D38E8B /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176CD195EB9B600D38E8B /* Model.m */; };
@@ -18,6 +20,10 @@
 		3AC176EB195F0D8600D38E8B /* GMTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176EA195F0D8600D38E8B /* GMTextViewCell.m */; };
 		3AC176EE195F148D00D38E8B /* GMGridImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176ED195F148D00D38E8B /* GMGridImageCell.m */; };
 		3AC176F1195F271700D38E8B /* UIView+Sugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176F0195F271700D38E8B /* UIView+Sugar.m */; };
+		3AC177031961249100D38E8B /* GMPhotoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC177021961249100D38E8B /* GMPhotoPicker.m */; };
+		3AC1770919612BE800D38E8B /* UIAlertView+Sugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1770819612BE800D38E8B /* UIAlertView+Sugar.m */; };
+		3AFD1B1D196282CC00C70909 /* add_photo_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFD1B1B196282CC00C70909 /* add_photo_press@2x.png */; };
+		3AFD1B1E196282CC00C70909 /* add_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AFD1B1C196282CC00C70909 /* add_photo@2x.png */; };
 		3AFE57E4195ABC42001E8E67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFE57E3195ABC42001E8E67 /* Foundation.framework */; };
 		3AFE57E6195ABC42001E8E67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFE57E5195ABC42001E8E67 /* CoreGraphics.framework */; };
 		3AFE57E8195ABC42001E8E67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFE57E7195ABC42001E8E67 /* UIKit.framework */; };
@@ -50,6 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AB9A0FD1962547900EDB303 /* ImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageManager.h; sourceTree = "<group>"; };
+		3AB9A0FE1962547900EDB303 /* ImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageManager.m; sourceTree = "<group>"; };
+		3AB9A1001962551300EDB303 /* CommonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonManager.h; sourceTree = "<group>"; };
+		3AB9A1011962551400EDB303 /* CommonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonManager.m; sourceTree = "<group>"; };
 		3AC176C5195E99F600D38E8B /* UIImage+Sugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Sugar.h"; sourceTree = "<group>"; };
 		3AC176C6195E99F600D38E8B /* UIImage+Sugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Sugar.m"; sourceTree = "<group>"; };
 		3AC176C8195EA03700D38E8B /* NSString+Sugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Sugar.h"; sourceTree = "<group>"; };
@@ -73,6 +83,12 @@
 		3AC176ED195F148D00D38E8B /* GMGridImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMGridImageCell.m; sourceTree = "<group>"; };
 		3AC176EF195F271700D38E8B /* UIView+Sugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Sugar.h"; sourceTree = "<group>"; };
 		3AC176F0195F271700D38E8B /* UIView+Sugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Sugar.m"; sourceTree = "<group>"; };
+		3AC177011961249100D38E8B /* GMPhotoPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMPhotoPicker.h; sourceTree = "<group>"; };
+		3AC177021961249100D38E8B /* GMPhotoPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMPhotoPicker.m; sourceTree = "<group>"; };
+		3AC1770719612BE800D38E8B /* UIAlertView+Sugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Sugar.h"; sourceTree = "<group>"; };
+		3AC1770819612BE800D38E8B /* UIAlertView+Sugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Sugar.m"; sourceTree = "<group>"; };
+		3AFD1B1B196282CC00C70909 /* add_photo_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_photo_press@2x.png"; sourceTree = "<group>"; };
+		3AFD1B1C196282CC00C70909 /* add_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_photo@2x.png"; sourceTree = "<group>"; };
 		3AFE57E0195ABC42001E8E67 /* Plan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFE57E3195ABC42001E8E67 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3AFE57E5195ABC42001E8E67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -138,6 +154,8 @@
 				3AC176CB195EB94D00D38E8B /* SugarHeader.h */,
 				3AC176EF195F271700D38E8B /* UIView+Sugar.h */,
 				3AC176F0195F271700D38E8B /* UIView+Sugar.m */,
+				3AC1770719612BE800D38E8B /* UIAlertView+Sugar.h */,
+				3AC1770819612BE800D38E8B /* UIAlertView+Sugar.m */,
 			);
 			path = Sugars;
 			sourceTree = "<group>";
@@ -239,6 +257,10 @@
 				3AFE5843195AD076001E8E67 /* Plan.m */,
 				3AC176CC195EB9B600D38E8B /* Model.h */,
 				3AC176CD195EB9B600D38E8B /* Model.m */,
+				3AB9A0FD1962547900EDB303 /* ImageManager.h */,
+				3AB9A0FE1962547900EDB303 /* ImageManager.m */,
+				3AB9A1001962551300EDB303 /* CommonManager.h */,
+				3AB9A1011962551400EDB303 /* CommonManager.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +268,8 @@
 		3AFE582B195AC43A001E8E67 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				3AFD1B1B196282CC00C70909 /* add_photo_press@2x.png */,
+				3AFD1B1C196282CC00C70909 /* add_photo@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -315,6 +339,8 @@
 		3AFE5833195AC43A001E8E67 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3AC177011961249100D38E8B /* GMPhotoPicker.h */,
+				3AC177021961249100D38E8B /* GMPhotoPicker.m */,
 				3AC176D7195EFB4C00D38E8B /* GMDevice.h */,
 				3AC176D8195EFB4C00D38E8B /* GMDevice.m */,
 			);
@@ -432,8 +458,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AFD1B1D196282CC00C70909 /* add_photo_press@2x.png in Resources */,
 				3AFE57FF195ABC42001E8E67 /* Images.xcassets in Resources */,
 				3AFE57EE195ABC42001E8E67 /* InfoPlist.strings in Resources */,
+				3AFD1B1E196282CC00C70909 /* add_photo@2x.png in Resources */,
 				3AFE57F7195ABC42001E8E67 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,10 +551,14 @@
 				3AC176E8195F0C5600D38E8B /* GMTextFieldCell.m in Sources */,
 				3AC176C7195E99F600D38E8B /* UIImage+Sugar.m in Sources */,
 				3AC176CE195EB9B600D38E8B /* Model.m in Sources */,
+				3AB9A0FF1962547900EDB303 /* ImageManager.m in Sources */,
+				3AC177031961249100D38E8B /* GMPhotoPicker.m in Sources */,
+				3AB9A1021962551400EDB303 /* CommonManager.m in Sources */,
 				3AC176E5195F0AF700D38E8B /* EditItemViewController.m in Sources */,
 				3AC176EB195F0D8600D38E8B /* GMTextViewCell.m in Sources */,
 				3AC176DC195F006300D38E8B /* GMTextField.m in Sources */,
 				3AC176EE195F148D00D38E8B /* GMGridImageCell.m in Sources */,
+				3AC1770919612BE800D38E8B /* UIAlertView+Sugar.m in Sources */,
 				3AFE57F0195ABC42001E8E67 /* main.m in Sources */,
 				3AFE5844195AD076001E8E67 /* Plan.m in Sources */,
 				3AFE5847195AD076001E8E67 /* Item.m in Sources */,

@@ -27,7 +27,14 @@ typedef enum
 @property (nonatomic, assign) CGFloat price;
 @property (nonatomic, copy) NSString *planId;
 @property (nonatomic, copy) NSString *detail;
-@property (nonatomic, strong)NSMutableArray *images;
+@property (nonatomic, strong)NSMutableArray *imageKeys;
+
+- (UIImage *)imageForKey:(NSString *)key;
+- (void)setImage:(UIImage *)image ForKey:(NSString *)key;
+- (void)addImage:(UIImage *)image;
+- (void)removeImageWithKey:(NSString *)key;
+
+- (void)clearImageCache;
 
 - (NSString *)priceDescription;
 
@@ -40,5 +47,6 @@ typedef enum
 }
 
 - (NSMutableArray *)itemsForPlanId:(NSString *)planId;
+
 
 @end

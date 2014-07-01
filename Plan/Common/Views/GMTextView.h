@@ -3,7 +3,7 @@
 //  Plan
 //
 //  Created by gamyhuang on 14-06-09.
-//  Copyright 2014 tencent. All rights reserved.
+//  Copyright 2014 gamy. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
