@@ -12,6 +12,8 @@
 #import "GMGridImageCell.h"
 #import "Item.h"
 #import "GMPhotoPicker.h"
+#import "AGPhotoBrowserView.h"
+
 
 typedef void (^ConfigCellBlock) (NSIndexPath *indexPath, UITableViewCell *cell, Item *item);
 
@@ -26,12 +28,13 @@ typedef enum{
      EditSectionCount
 }EditSection;
 
-@interface EditItemViewController ()
+@interface EditItemViewController ()< AGPhotoBrowserDelegate, AGPhotoBrowserDataSource>
 {
 
 }
 
 @property(nonatomic, strong)GMPhotoPicker *picker;
+@property (nonatomic, strong) AGPhotoBrowserView *browserView;
 
 @end
 
@@ -153,7 +156,7 @@ typedef enum{
         
     };
 
-
+    
     ConfigCellBlock imageCellConfig = ^(NSIndexPath *indexPath, UITableViewCell *cell, Item *item)
     {
         GMGridImageCell *tc = (id)cell;
@@ -173,6 +176,8 @@ typedef enum{
         [tc updateWithImages:images indexPath:indexPath];
         tc.tapImageBlock = ^(NSInteger index, NSIndexPath *ip){
             //TODO enter phto broswer
+            wself.browserView = nil;
+            [wself.browserView showFromIndex:ip.row*3 + index];
         };
         
         tc.addImageBlock = ^(NSInteger index, NSIndexPath *ip){
@@ -265,5 +270,58 @@ typedef enum{
     UIView *firstRes = [self.tableView firstResponder];
     [firstRes resignFirstResponder];
 }
+
+
+#pragma mark - AGPhotoBrowser datasource
+
+- (NSInteger)numberOfPhotosForPhotoBrowser:(AGPhotoBrowserView *)photoBrowser
+{
+    return self.item.imageKeys.count;
+}
+
+- (UIImage *)photoBrowser:(AGPhotoBrowserView *)photoBrowser imageAtIndex:(NSInteger)index
+{
+    return [_item imageForKey:_item.imageKeys[index]];
+}
+
+- (BOOL)photoBrowser:(AGPhotoBrowserView *)photoBrowser willDisplayActionButtonAtIndex:(NSInteger)index
+{
+    return NO;
+}
+
+
+#pragma mark - AGPhotoBrowser delegate
+
+- (void)photoBrowser:(AGPhotoBrowserView *)photoBrowser didTapOnDoneButton:(UIButton *)doneButton
+{
+	[self.browserView hideWithCompletion:^(BOOL finished){
+        
+	}];
+}
+
+- (void)photoBrowser:(AGPhotoBrowserView *)photoBrowser didTapOnActionButton:(UIButton *)actionButton atIndex:(NSInteger)index
+{
+	UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:@""
+														delegate:nil
+											   cancelButtonTitle:NSLocalizedString(@"Cancel", @"Cancel button")
+										  destructiveButtonTitle:NSLocalizedString(@"Delete", @"Delete button")
+											   otherButtonTitles:NSLocalizedString(@"Share", @"Share button"), nil];
+	[action showInView:self.view];
+}
+
+
+#pragma mark - Getters
+
+- (AGPhotoBrowserView *)browserView
+{
+	if (!_browserView) {
+		_browserView = [[AGPhotoBrowserView alloc] initWithFrame:CGRectZero];
+		_browserView.delegate = self;
+		_browserView.dataSource = self;
+	}
+	
+	return _browserView;
+}
+
 
 @end

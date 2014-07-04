@@ -17,5 +17,4 @@ pod 'UIColor-Hex', '~> 0.1.1'
 pod 'NSDate+Calendar', '~> 0.0.4'
 pod 'NSDate-Time-Ago', '~> 1.0'
 pod 'RegExCategories', '~> 1.0'
-
-
+pod 'AGPhotoBrowser', '~> 1.1.0'

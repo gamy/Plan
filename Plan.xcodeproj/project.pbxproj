@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A9589711963BA3A004DA22D /* UITableViewCell+Sugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9589701963BA3A004DA22D /* UITableViewCell+Sugar.m */; };
+		3A95899019642D9D004DA22D /* GMOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A95898F19642D9D004DA22D /* GMOptionView.m */; };
 		3AB9A0FF1962547900EDB303 /* ImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9A0FE1962547900EDB303 /* ImageManager.m */; };
 		3AB9A1021962551400EDB303 /* CommonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB9A1011962551400EDB303 /* CommonManager.m */; };
 		3AC176C7195E99F600D38E8B /* UIImage+Sugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC176C6195E99F600D38E8B /* UIImage+Sugar.m */; };
@@ -56,6 +58,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A95896F1963BA3A004DA22D /* UITableViewCell+Sugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Sugar.h"; sourceTree = "<group>"; };
+		3A9589701963BA3A004DA22D /* UITableViewCell+Sugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Sugar.m"; sourceTree = "<group>"; };
+		3A95898E19642D9D004DA22D /* GMOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMOptionView.h; sourceTree = "<group>"; };
+		3A95898F19642D9D004DA22D /* GMOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMOptionView.m; sourceTree = "<group>"; };
 		3AB9A0FD1962547900EDB303 /* ImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageManager.h; sourceTree = "<group>"; };
 		3AB9A0FE1962547900EDB303 /* ImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageManager.m; sourceTree = "<group>"; };
 		3AB9A1001962551300EDB303 /* CommonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonManager.h; sourceTree = "<group>"; };
@@ -156,6 +162,8 @@
 				3AC176F0195F271700D38E8B /* UIView+Sugar.m */,
 				3AC1770719612BE800D38E8B /* UIAlertView+Sugar.h */,
 				3AC1770819612BE800D38E8B /* UIAlertView+Sugar.m */,
+				3A95896F1963BA3A004DA22D /* UITableViewCell+Sugar.h */,
+				3A9589701963BA3A004DA22D /* UITableViewCell+Sugar.m */,
 			);
 			path = Sugars;
 			sourceTree = "<group>";
@@ -367,6 +375,8 @@
 				3AC176EA195F0D8600D38E8B /* GMTextViewCell.m */,
 				3AC176EC195F148D00D38E8B /* GMGridImageCell.h */,
 				3AC176ED195F148D00D38E8B /* GMGridImageCell.m */,
+				3A95898E19642D9D004DA22D /* GMOptionView.h */,
+				3A95898F19642D9D004DA22D /* GMOptionView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -546,6 +556,7 @@
 			files = (
 				3AFE583C195AC476001E8E67 /* PlanViewController.m in Sources */,
 				3AC176F1195F271700D38E8B /* UIView+Sugar.m in Sources */,
+				3A9589711963BA3A004DA22D /* UITableViewCell+Sugar.m in Sources */,
 				3AFE57F4195ABC42001E8E67 /* AppDelegate.m in Sources */,
 				3AC176D4195EFAE600D38E8B /* GMTextView.m in Sources */,
 				3AC176E8195F0C5600D38E8B /* GMTextFieldCell.m in Sources */,
@@ -554,6 +565,7 @@
 				3AB9A0FF1962547900EDB303 /* ImageManager.m in Sources */,
 				3AC177031961249100D38E8B /* GMPhotoPicker.m in Sources */,
 				3AB9A1021962551400EDB303 /* CommonManager.m in Sources */,
+				3A95899019642D9D004DA22D /* GMOptionView.m in Sources */,
 				3AC176E5195F0AF700D38E8B /* EditItemViewController.m in Sources */,
 				3AC176EB195F0D8600D38E8B /* GMTextViewCell.m in Sources */,
 				3AC176DC195F006300D38E8B /* GMTextField.m in Sources */,

@@ -48,6 +48,16 @@
     return [[ItemManager sharedManager] itemsForPlanId:self.cid];
 }
 
+- (NSInteger)totalPrice
+{
+    NSArray *items = [self items];
+    CGFloat price = 0;
+    for (Item *item in items) {
+        price += item.price;
+    }
+    return price;
+}
+
 @end
 
 

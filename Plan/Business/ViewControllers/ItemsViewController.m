@@ -12,9 +12,13 @@
 #import "Item.h"
 
 
+
 @interface ItemsViewController ()
 
 @property(nonatomic, strong)NSMutableArray *items;
+@property (weak, nonatomic) IBOutlet UILabel *numberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (strong, nonatomic) UIView *headerView;
 
 - (void)configureView;
 @end
@@ -25,6 +29,10 @@
 
 - (void)configureView
 {
+    self.headerView = self.tableView.tableHeaderView;
+    self.tableView.tableHeaderView = nil;
+
+    
     __weak GMTextField *textField = (id)[self.navigationItem titleView];
     __weak Plan *plan = self.plan;
     __weak typeof (self) wself = self;
@@ -53,10 +61,17 @@
 }
 
 
+- (void)updateHeader
+{
+    self.numberLabel.text = [NSString stringWithFormat:@"%d 项", (int)[[self.plan items] count]];
+    self.priceLabel.text = [NSString stringWithFormat:@"%d 元", (int)[self.plan totalPrice]];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self.items sortUsingComparator:[Item comparator]];
+    [self updateHeader];
     [self.tableView reloadData];
 }
 
@@ -108,6 +123,20 @@
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if ([self.items count] > 0) {
+        return self.headerView.frame.size.height;
+    }
+    return 0;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return self.headerView;
 }
 
 

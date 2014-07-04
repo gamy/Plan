@@ -129,6 +129,15 @@
     return _imageKeys;
 }
 
+- (UIImage *)firstImage
+{
+    if ([self.imageKeys count] > 0) {
+        UIImage *image = [self imageForKey:self.imageKeys[0]];
+        return image;
+    }
+    return nil;
+}
+
 @end
 
 

@@ -33,7 +33,7 @@ typedef enum
 - (void)setImage:(UIImage *)image ForKey:(NSString *)key;
 - (void)addImage:(UIImage *)image;
 - (void)removeImageWithKey:(NSString *)key;
-
+- (UIImage *)firstImage;
 - (void)clearImageCache;
 
 - (NSString *)priceDescription;

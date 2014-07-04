@@ -11,5 +11,6 @@
 @interface UIView (Sugar)
 
 - (UIView*)firstResponder;
+- (UIImage *)snapshot;
 
 @end

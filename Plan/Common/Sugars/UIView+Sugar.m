@@ -20,4 +20,14 @@
     return nil;
 }
 
+- (UIImage *)snapshot
+{
+    UIImage *image = nil;
+    UIGraphicsBeginImageContextWithOptions(self.frame.size, YES, 2);
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 @end
